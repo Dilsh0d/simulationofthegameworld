@@ -1,5 +1,7 @@
 package ru.sbt.test.refactoring;
 
+import ru.sbt.test.refactoring.exception.TractorInDitchException;
+
 public class Tractor {
 
 	int[] position = new int[] { 0, 0 };
