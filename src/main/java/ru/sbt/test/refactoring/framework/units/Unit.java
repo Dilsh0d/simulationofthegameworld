@@ -3,9 +3,14 @@ package ru.sbt.test.refactoring.framework.units;
 /**
  * @author Dilshod Tadjiev
  */
-public abstract class Unit {
+public abstract class Unit implements UnitStrategy {
     private int x;
     private int y;
+    private boolean useCoordinate = true;
+
+    public Unit(){
+        this.useCoordinate = false;
+    }
 
     public Unit(int x, int y) {
         this.x = x;
@@ -26,5 +31,9 @@ public abstract class Unit {
 
     public void setY(int y) {
         this.y = y;
+    }
+
+    public boolean isUseCoordinate() {
+        return useCoordinate;
     }
 }

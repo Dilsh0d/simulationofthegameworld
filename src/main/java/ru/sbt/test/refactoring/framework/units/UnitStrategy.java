@@ -5,5 +5,6 @@ package ru.sbt.test.refactoring.framework.units;
  * @project: Electron-Ticket
  * @version: 2.0
  */
-public class UnitStrategy {
+public interface UnitStrategy {
+    void command(char key);
 }
