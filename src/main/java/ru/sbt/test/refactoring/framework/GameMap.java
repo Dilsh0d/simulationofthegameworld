@@ -14,7 +14,7 @@ public final class GameMap {
     private GameMap(int width, int height) {
         this.width = width;
         this.height = height;
-        this.map = new int[width][height];
+        this.map = new int[height][width];
     }
 
     public boolean isCoordinatesEmpty(int newX, int newY) {
@@ -24,12 +24,12 @@ public final class GameMap {
     }
 
     public void setUnitCoordinates(int x, int y) {
-        this.map[x][y] = 1;
+        this.map[y][x] = 1;
     }
 
     public void moveUnit(int x, int y, int newX, int newY) {
-        this.map[x][y] = 0;
-        this.map[newX][newY] = 1;
+        this.map[y][x] = 0;
+        this.map[newY][newX] = 1;
     }
 
     public static GameMap getInstance() {
