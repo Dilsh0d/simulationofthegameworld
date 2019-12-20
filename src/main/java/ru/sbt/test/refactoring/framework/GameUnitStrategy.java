@@ -20,11 +20,8 @@ public class GameUnitStrategy {
 
     public void putUnit(String unitName, UnitStrategy unit) {
         this.unitsMap.put(unitName, unit);
-        if (unit instanceof Unit) {
-            Unit mapUnit = ((Unit) unit);
-            if (mapUnit.isUseCoordinate() && GameMap.getInstance().isCoordinatesEmpty(mapUnit.getX(), mapUnit.getY())) {
-                GameMap.getInstance().setUnitCoordinates(mapUnit.getX(), mapUnit.getY());
-            }
+        if (unit.isUseCoordinate() && GameMap.getInstance().isCoordinatesEmpty(unit.getX(), unit.getY())) {
+            GameMap.getInstance().setUnitCoordinates(unit.getX(), unit.getY());
         }
     }
 

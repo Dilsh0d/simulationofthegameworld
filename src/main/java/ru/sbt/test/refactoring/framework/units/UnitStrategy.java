@@ -7,4 +7,7 @@ package ru.sbt.test.refactoring.framework.units;
  */
 public interface UnitStrategy {
     void command(char key);
+    int getX();
+    int getY();
+    boolean isUseCoordinate();
 }
