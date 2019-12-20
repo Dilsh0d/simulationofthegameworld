@@ -15,6 +15,10 @@ public class TowerUnit extends UnitTurn {
         this.patron = patron;
     }
 
+    public int getPatron() {
+        return patron;
+    }
+
     @Override
     public void command(char key) {
         super.command(key);

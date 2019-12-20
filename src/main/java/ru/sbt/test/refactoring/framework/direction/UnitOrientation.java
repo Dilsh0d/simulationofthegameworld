@@ -1,5 +1,5 @@
 package ru.sbt.test.refactoring.framework.direction;
 
 public enum UnitOrientation {
-	NORTH, WEST, SOUTH, EAST;
+	NORTH, WEST, SOUTH, EAST, NONE;
 }

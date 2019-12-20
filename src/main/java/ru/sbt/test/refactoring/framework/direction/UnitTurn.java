@@ -22,16 +22,12 @@ public class UnitTurn extends Unit {
         return orientation;
     }
 
-    public void setOrientation(UnitOrientation orientation) {
-        this.orientation = orientation;
-    }
-
     public void command(char key) {
         turn(key);
     }
 
     protected void turn(char key) {
-        switch (key){
+        switch (key) {
             case GameCommand.TURN_OR_MOTION_NORTH: {
                 this.orientation = UnitOrientation.NORTH;
                 break;

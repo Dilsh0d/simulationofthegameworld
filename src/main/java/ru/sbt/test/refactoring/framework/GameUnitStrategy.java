@@ -25,6 +25,10 @@ public class GameUnitStrategy {
         }
     }
 
+    public UnitStrategy getUnit(String unitName) {
+        return unitsMap.get(unitName);
+    }
+
     public void command(String unitName, char command) {
         if (this.unitsMap.containsKey(unitName))
             this.unitsMap.get(unitName).command(command);

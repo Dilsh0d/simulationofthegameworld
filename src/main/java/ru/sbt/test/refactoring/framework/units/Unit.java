@@ -1,5 +1,7 @@
 package ru.sbt.test.refactoring.framework.units;
 
+import ru.sbt.test.refactoring.framework.direction.UnitOrientation;
+
 /**
  * @author Dilshod Tadjiev
  */
@@ -31,6 +33,11 @@ public abstract class Unit implements UnitStrategy {
 
     public void setY(int y) {
         this.y = y;
+    }
+
+    @Override
+    public UnitOrientation getOrientation() {
+        return UnitOrientation.NONE;
     }
 
     public boolean isUseCoordinate() {

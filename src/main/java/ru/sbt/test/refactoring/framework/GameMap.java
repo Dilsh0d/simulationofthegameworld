@@ -40,9 +40,6 @@ public final class GameMap {
     }
 
     public static GameMap init(int width, int height) {
-        if (_INSTANCE != null) {
-            throw new AssertionError("You already initialized me");
-        }
         _INSTANCE = new GameMap(width, height);
         return _INSTANCE;
     }

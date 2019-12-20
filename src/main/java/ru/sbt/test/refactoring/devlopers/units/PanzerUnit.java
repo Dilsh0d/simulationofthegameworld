@@ -15,9 +15,14 @@ public class PanzerUnit extends UnitMotion {
         this.patron = patron;
     }
 
+    public int getPatron() {
+        return patron;
+    }
+
     @Override
     public void command(char key) {
         super.command(key);
+        shot(key);
     }
 
     public void shot(char key) {
